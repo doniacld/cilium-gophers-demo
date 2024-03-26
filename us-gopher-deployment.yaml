@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gopher-colony-us
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: gopher
+      continent: us
+  template:
+    metadata:
+      labels:
+        app: gopher
+        continent: us
+    spec:
+      containers:
+        - name: gopher-container
+          image: gopher-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080

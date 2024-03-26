@@ -1,0 +1,17 @@
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: gopher-travel-policy-allow-only-eu
+spec:
+  description: "Allow gophers to travel across Europe"
+  endpointSelector:
+    matchLabels:
+      app: gopher
+      continent: eu
+  egress:
+    - toEndpoints:
+        - matchLabels:
+            continent: eu
+        - matchExpressions:
+          - { key: 'k8s-app', operator: In, values: [ "kube-dns", "coredns", "node-local-dns", "nodelocaldns" ] }
+          - { key: 'io.kubernetes.pod.namespace', operator: In, values: [ "kube-system" ] }

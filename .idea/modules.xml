@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../cilium/ebpf/.idea/ebpf.iml" filepath="$PROJECT_DIR$/../../cilium/ebpf/.idea/ebpf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ebpf-magic.iml" filepath="$PROJECT_DIR$/.idea/ebpf-magic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../ebpf/libbpfgo-beginners/.idea/libbpfgo-beginners.iml" filepath="$PROJECT_DIR$/../../ebpf/libbpfgo-beginners/.idea/libbpfgo-beginners.iml" />
+    </modules>
+  </component>
+</project>
